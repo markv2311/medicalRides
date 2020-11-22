@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'bottom-nav',
@@ -9,7 +10,9 @@ export class BottomNavComponent implements OnInit {
   // Determines if the user has dispatch view
   hasDispatchView = true;
 
-  constructor() { }
+  constructor(
+      private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -18,14 +21,14 @@ export class BottomNavComponent implements OnInit {
    * TODO: Function opens the dispatcher view
    */
   openDispatchView(): void {
-    console.log('opening dispatch view');
+    this.router.navigate(['./dispatch']);
   }
 
   /**
    * TODO: Function opens the driver view
    */
   openDriverView(): void {
-    console.log('opening driver view');
+    this.router.navigate(['./driver']);
   }
 
 }
