@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestComponentComponent } from './components/test-component/test-component.component';
 import {MatButtonModule} from '@angular/material/button';
+import { DispatchMainPageComponent } from './views/dispatch-main-page/dispatch-main-page.component';
+import { BottomNavComponent } from './widgets/bottom-nav/bottom-nav.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponentComponent
+    TestComponentComponent,
+    DispatchMainPageComponent,
+    BottomNavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
