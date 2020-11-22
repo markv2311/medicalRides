@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {DispatchMainPageComponent} from './views/dispatch-main-page/dispatch-main-page.component';
-import {DispatchJobQueueComponent} from "./views/dispatch-main-page/dispatch-job-queue/dispatch-job-queue.component";
+import {DriverMainPageComponent} from './views/driver-main-page/driver-main-page.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'dispatch', pathMatch: 'full' },
   { path: 'dispatch', component: DispatchMainPageComponent},
-  { path: 'driver', component: DispatchJobQueueComponent}
+  { path: 'driver', component: DriverMainPageComponent}
 ];
 
 @NgModule({
@@ -13,4 +14,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [DispatchMainPageComponent, DispatchJobQueueComponent];
+export const routingComponents = [DispatchMainPageComponent, DriverMainPageComponent];
