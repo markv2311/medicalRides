@@ -1,0 +1,14 @@
+<div class="bottom-nav-container">
+  <div *ngIf="hasDispatchView" class="nav-item" (click)="openDispatchView()">
+    <mat-icon class="nav-icon">record_voice_over</mat-icon>
+    <span>Dispatcher</span>
+  </div>
+  <div class="nav-item">
+    <mat-icon class="nav-icon">commute</mat-icon>
+    <span>Jobs</span>
+  </div>
+  <div class="nav-item" (click)="openDriverView()">
+    <mat-icon class="nav-icon">local_shipping</mat-icon>
+    <span>Driver</span>
+  </div>
+</div>
