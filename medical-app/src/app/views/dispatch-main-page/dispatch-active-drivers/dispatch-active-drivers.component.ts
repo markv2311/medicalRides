@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {DriverStatusService} from '../../../services/driver-status.service';
 @Component({
   selector: 'dispatch-active-drivers',
   templateUrl: './dispatch-active-drivers.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DispatchActiveDriversComponent implements OnInit {
 
-  constructor() { }
+  constructor(public driverStatus: DriverStatusService) {}
 
   ngOnInit(): void {
   }
