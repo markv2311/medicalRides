@@ -14,6 +14,7 @@ export class JobSelectorService {
   constructor() {
     /** TECHNIQUE 1: Create object using OOP techniques */
     this.jobOne = new Job(); // Create job
+    this.jobOne.jobId = 0;
     this.jobOne.destinationAddress = 'Unity Hospital'; // Define properties
     this.jobOne.pickupAddress = '123 Generic Lane';
     this.jobOne.pickupTime = '2:30 PM';
@@ -25,6 +26,7 @@ export class JobSelectorService {
     this.jobOne.notes = 'The pickup location is farther than normal.  Arrive earlier than normal to account for traffic.';
     /** TECHNIQUE 2: Use JSON (preferred approach) */
     this.jobTwo = {
+      jobId: 1,
       destinationAddress: 'Rochester Regional Hospital',
       pickupAddress: '43 Rainbow Road',
       pickupTime: '12:00 PM',
@@ -35,8 +37,26 @@ export class JobSelectorService {
       vehicleType: 'Single',
       notes: 'Passenger tends to run late.  Arrive extra early.'
     };
-    // By default, the current job will initialize to jobOne
-    this.currentJob = this.jobOne;
+    // Check if the job was cached
+    if (!localStorage.getItem('currentJobId')) {
+      // By default, the current job will initialize to jobOne
+      this.currentJob = this.jobOne;
+    } else {
+      this.currentJob = this.retrieveJobFromCache();
+    }
+  }
+
+  /**
+   * Figures out which job is being used based off of a cached value
+   *
+   * @return - Returns the active job
+   */
+  retrieveJobFromCache(): Job {
+    if (Number(localStorage.getItem('currentJobId')) === 0) {
+      return this.jobOne;
+    } else {
+      return this.jobTwo;
+    }
   }
 
   /**
@@ -45,7 +65,13 @@ export class JobSelectorService {
    * @return - Returns the current job
    */
   getCurrentJob(): Job {
-    return this.currentJob;
+    // Check if the cached value exists
+    if (localStorage.getItem('currentJobId')) {
+      // If it does, check which job is present
+      return this.retrieveJobFromCache();
+    } else {
+      return this.currentJob;
+    }
   }
 
   /**
@@ -54,5 +80,7 @@ export class JobSelectorService {
   toggleJob(): void {
     // Toggle the job from one to two when this function is run
     this.currentJob = (this.currentJob === this.jobOne) ? this.jobTwo : this.jobOne;
+    // Cache the value
+    localStorage.setItem('currentJobId', this.currentJob.jobId.toString());
   }
 }
