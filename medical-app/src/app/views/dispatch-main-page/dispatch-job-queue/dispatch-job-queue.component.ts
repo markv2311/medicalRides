@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DispatchJobQueueComponent implements OnInit {
   pickup: string = 'Pikachu';
+  status: string;
   constructor() { }
 
   ngOnInit(): void {
