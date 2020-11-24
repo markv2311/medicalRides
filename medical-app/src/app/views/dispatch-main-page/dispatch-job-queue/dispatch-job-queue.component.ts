@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';import {Job} from '../classes/job';
 
 @Component({
   selector: 'dispatch-job-queue',
@@ -24,7 +24,6 @@ export class DispatchJobQueueComponent implements OnInit {
   driver3: string ='Clear';
 //This is where the data for the buttons will be taken and given to the html file.
 
- // @Input() pickup: 'pikachu'|'keep going';
   constructor() { }
   ngOnInit(): void {
   }
