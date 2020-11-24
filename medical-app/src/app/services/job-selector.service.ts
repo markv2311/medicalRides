@@ -9,6 +9,7 @@ export class JobSelectorService {
   // Adds three sample jobs that can be used within the application
   jobOne: Job;
   jobTwo: Job;
+  currentJob: Job;
 
   constructor() {
     /** TECHNIQUE 1: Create object using OOP techniques */
@@ -24,12 +25,24 @@ export class JobSelectorService {
       pickupTime: '12:00 PM',
       dropOffTime: '1:00 PM'
     };
+    // By default, the current job will initialize to jobOne
+    this.currentJob = this.jobOne;
   }
 
   /**
+   * Function retrieves the active job
    *
+   * @return - Returns the current job
    */
   getCurrentJob(): Job {
+    return this.currentJob;
+  }
 
+  /**
+   * Toggles the jobs
+   */
+  toggleJob(): void {
+    // Toggle the job from one to two when this function is run
+    this.currentJob = (this.currentJob === this.jobOne) ? this.jobOne : this.jobTwo;
   }
 }
