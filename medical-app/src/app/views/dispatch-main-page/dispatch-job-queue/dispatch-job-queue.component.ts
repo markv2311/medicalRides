@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'dispatch-job-queue',
@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dispatch-job-queue.component.less']
 })
 export class DispatchJobQueueComponent implements OnInit {
-  pickup: string = 'Pikachu';
   status: string;
+  @Input() pickup: 'pikachu'|'keep going';
   constructor() { }
-
   ngOnInit(): void {
   }
 
