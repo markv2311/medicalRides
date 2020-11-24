@@ -9,7 +9,6 @@ import {Router} from "@angular/router";
 export class BottomNavComponent implements OnInit {
   // Determines if the user has dispatch view
   hasDispatchView = true;
-  //viewConfirm = true;
 
   constructor(
       private router: Router
