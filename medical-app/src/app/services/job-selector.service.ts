@@ -43,6 +43,6 @@ export class JobSelectorService {
    */
   toggleJob(): void {
     // Toggle the job from one to two when this function is run
-    this.currentJob = (this.currentJob === this.jobOne) ? this.jobOne : this.jobTwo;
+    this.currentJob = (this.currentJob === this.jobOne) ? this.jobTwo : this.jobOne;
   }
 }
