@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dispatch-job-queue.component.less']
 })
 export class DispatchJobQueueComponent implements OnInit {
-  pickup: string;
+  pickup: string = 'Pikachu';
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  
+
 }
