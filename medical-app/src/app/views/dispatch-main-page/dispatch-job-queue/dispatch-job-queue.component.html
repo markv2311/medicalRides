@@ -15,23 +15,26 @@
     </button>
     <!-- both of these button tags create the buttons but based on the status of the job, 
       it wil be green or red. The status of the job is a boolean located in queue.component.ts-->
-      <button type="button" *ngIf="status" style="position:absolute; left:500px; border: 3px solid red;">Pickup: {{pickup}}<br />
-        Destination: {{destination}}
+      <button type="button" *ngIf="status2" style="position:absolute; left:500px; border: 3px solid red;">Pickup: {{pickup2}}<br />
+        Destination: {{destination2}}
         <br />
-        Driver: {{driver}}
+        Driver: {{driver2}}
       </button>
-      <button type="!button" *ngIf="!status" style="position:absolute; left:500px; border: 3px solid green;">Pickup: {{pickup}}<br />
-        Destination: {{destination}}
+      <button type="!button" *ngIf="!status2" style="position:absolute; left:500px; border: 3px solid green;">Pickup: {{pickup2}}<br />
+        Destination: {{destination2}}
         <br />
-        Driver: {{driver}}
+        Driver: {{driver2}}
       </button>
     <!---second button-->
-    <button type="button" *ngIf="status" style="position:absolute; left:1000px; border: 3px solid red;">Pickup: {{pickup2}}<br />
-      Destination: {{destination2}}
+
+
+
+    <button type="button" *ngIf="status3" style="position:absolute; left:1000px; border: 3px solid red;">Pickup: {{pickup3}}<br />
+      Destination: {{destination3}}
       <br />
-      Driver: {{driver2}}
+      Driver: {{driver3}}
     </button>
-    <button type="!button" *ngIf="!status" style="position:absolute; left:1000px; border: 3px solid green;">Pickup: {{pickup3}}<br />
+    <button type="!button" *ngIf="!status3" style="position:absolute; left:1000px; border: 3px solid green;">Pickup: {{pickup3}}<br />
       Destination: {{destination3}}
       <br />
       Driver: {{driver3}}
