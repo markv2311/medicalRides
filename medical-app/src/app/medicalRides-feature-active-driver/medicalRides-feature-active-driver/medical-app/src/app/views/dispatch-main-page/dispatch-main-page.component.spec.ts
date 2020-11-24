@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DispatchJobQueueComponent } from './dispatch-job-queue.component';
+import { DispatchMainPageComponent } from './dispatch-main-page.component';
 
-describe('DispatchJobQueueComponent', () => {
-  let component: DispatchJobQueueComponent;
-  let fixture: ComponentFixture<DispatchJobQueueComponent>;
+describe('DispatchMainPageComponent', () => {
+  let component: DispatchMainPageComponent;
+  let fixture: ComponentFixture<DispatchMainPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DispatchJobQueueComponent ]
+      declarations: [ DispatchMainPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DispatchJobQueueComponent);
+    fixture = TestBed.createComponent(DispatchMainPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
