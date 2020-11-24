@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./dispatch-job-queue.component.less']
 })
 export class DispatchJobQueueComponent implements OnInit {
-  status: boolean;
+  status: boolean = true;
   @Input() pickup: 'pikachu'|'keep going';
   constructor() { }
   ngOnInit(): void {
