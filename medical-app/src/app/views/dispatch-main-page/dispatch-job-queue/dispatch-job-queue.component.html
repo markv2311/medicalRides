@@ -3,14 +3,14 @@
   <div class="job-container">
     <!-- TODO: Add functionality (use of ngFor recommended to loop through and print active jobs)   -->
     <button type="button" *ngIf="status" style="border: 3px solid red;">Pickup: {{pickup}}<br />
-      Destination:
+      Destination: {{destination}}
       <br />
-      Driver: 
+      Driver: {{driver}}
     </button>
     <button type="!button" *ngIf="!status" style="border: 3px solid green;">Pickup: {{pickup}}<br />
-      Destination:
+      Destination: {{destination}}
       <br />
-      Driver: 
+      Driver: {{driver}}
     </button>
     <!-- both of these button tags create the buttons but based on the status of the job, 
       it wil be green or red. The status of the job is a boolean located in queue.component.ts-->

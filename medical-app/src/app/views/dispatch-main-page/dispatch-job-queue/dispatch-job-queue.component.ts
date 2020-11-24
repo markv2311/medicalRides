@@ -7,7 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class DispatchJobQueueComponent implements OnInit {
   status: boolean = true;
-  @Input() pickup: 'pikachu'|'keep going';
+  pickup: string ='1242 Thing Ave';
+  destination: string ='64 Stone Rd';
+  driver: string ='Needs Assignment';
+ // @Input() pickup: 'pikachu'|'keep going';
   constructor() { }
   ngOnInit(): void {
   }
