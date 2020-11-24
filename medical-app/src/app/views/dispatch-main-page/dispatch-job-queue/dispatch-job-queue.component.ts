@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';import {Job} from '../classes/job';
+import { Component, Input, OnInit } from '@angular/core';
+import {Job} from '../classes/job';
 
 @Component({
   selector: 'dispatch-job-queue',
