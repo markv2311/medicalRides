@@ -1,6 +1,6 @@
 <div class="job-queue-container">
   <h2>Job Queue</h2>
-  <div class="job-container">
+  <div class="job-container" *ngIf="status; else elseBlock">
     <!-- TODO: Add functionality (use of ngFor recommended to loop through and print active jobs)   -->
     <button type="button">Pickup: {{pickup}}<br />
       Destination:
@@ -8,5 +8,11 @@
       Driver: 
     </button>
   </div>
+  <ng-template #elseBlock>
+    <button type="button" id=inactive>Pickup: {{pickup}}<br />
+    Destination:
+    <br />
+    Driver: 
+  </button></ng-template>
 </div>
 
