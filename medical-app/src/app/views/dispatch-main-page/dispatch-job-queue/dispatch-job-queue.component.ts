@@ -14,12 +14,13 @@ export class DispatchJobQueueComponent implements OnInit {
   public job1: Job;
   public job2: Job;
   public job3: Job;
+  public jobs: Job[];
   //all buttons must have diffrent status values.
-  driver: string ='Needs Assignment';
+  driverstatus: string ='Needs Assignment';
 
-  driver2: string ='Rolling';
+  driver2status: string ='Rolling';
 
-  driver3: string ='Clear';
+  driver3status: string ='Clear';
 //This is where the data for the buttons will be taken and given to the html file.
 
   constructor(private router: Router) {
@@ -61,7 +62,8 @@ export class DispatchJobQueueComponent implements OnInit {
     };
     //These are the "properties" of the three job buttons. 
     //By using this method with JSON, these properties can be called from anywhere
-    }
+    this.jobs =[this.job1,this.job2,this.job3];
+  }
   ngOnInit(): void {
   }
   navigateToDispatcherOptions(): void{
