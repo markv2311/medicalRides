@@ -12,7 +12,7 @@ import { DispatchActiveDriversComponent} from './views/dispatch-main-page/dispat
 import { DriverMainPageComponent } from './views/driver-main-page/driver-main-page.component';
 import {DispatchJobQueueComponent} from './views/dispatch-main-page/dispatch-job-queue/dispatch-job-queue.component';
 import { DriverDetailsPageComponent } from './views/driver-main-page/driver-details-page/driver-details-page.component';
-import { DispatcherOptionsComponent } from './dispatcher-options/dispatcher-options.component';
+import { DispatcherOptionsComponent } from './views/dispatch-main-page/dispatcher-options/dispatcher-options.component';
 
 @NgModule({
   declarations: [

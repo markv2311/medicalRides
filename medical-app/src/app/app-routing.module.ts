@@ -7,6 +7,7 @@ import {DriverDetailsPageComponent} from './views/driver-main-page/driver-detail
 const routes: Routes = [
   { path: '', redirectTo: 'dispatch', pathMatch: 'full' },
   { path: 'dispatch', component: DispatchMainPageComponent},
+  { path: 'dispatcher-options', component: DispatcherOptionsComponent},
   { path: 'driver', component: DriverMainPageComponent},
   { path: 'driver-details', component: DriverDetailsPageComponent}
 ];
@@ -16,4 +17,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [DispatchMainPageComponent, DriverMainPageComponent, DriverDetailsPageComponent, DispatcherOptionsComponent];
+export const routingComponents = [DispatchMainPageComponent, DispatcherOptionsComponent,DriverMainPageComponent, DriverDetailsPageComponent];
