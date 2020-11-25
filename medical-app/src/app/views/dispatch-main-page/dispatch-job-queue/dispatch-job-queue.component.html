@@ -2,32 +2,31 @@
   <h1 style="text-align: center"> Dispatcher View</h1>
   <h2>Job Queue</h2>
   <div class="job-container">
-    <!-- TODO: Add functionality (use of ngFor recommended to loop through and print active jobs)   -->
-    <!--<div *ngFor="let job of jobs">-->
-    <button type="button" mat-raised-button (click)="navigateToDispatcherOptions()" [ngStyle]="{'border': status ? '3px solid red' : '3px solid green'}">Pickup: {{job1.pickupAddress}}<br />
+    <div class="job-button" (click)="navigateToDispatcherOptions()"
+         [ngStyle]="{'border': status ? '3px solid red' : '3px solid green'}">
+      Pickup: {{job1.pickupAddress}}<br/>
       Destination: {{job1.destinationAddress}}
-      <br />
+      <br/>
       Driver: {{driverstatus}}
-    </button>
+    </div>
     <!-- both of these button tags create the buttons but based on the status of the job, 
       it wil be green or red. The status of the job is a boolean located in queue.component.ts-->
-      <!--<div>-->
-      
-      <button type="button" mat-raised-button (click)="navigateToDispatcherOptions()" style="position:absolute; left:500px;" [ngStyle]="{'border': status2 ? '3px solid red' : '3px solid green'}">Pickup: {{job2.pickupAddress}}<br />
-        Destination: {{job2.destinationAddress}}
-        <br />
-        Driver: {{driver2status}}
-      </button>
+    <div class="job-button" (click)="navigateToDispatcherOptions()"
+         [ngStyle]="{'border': status2 ? '3px solid red' : '3px solid green'}">
+      Pickup: {{job2.pickupAddress}}<br/>
+      Destination: {{job2.destinationAddress}}
+      <br/>
+      Driver: {{driver2status}}
+    </div>
     <!---second button-->
-
-
-
-    <button type="button" mat-raised-button (click)="navigateToDispatcherOptions()" style="position:absolute; left:1000px;" [ngStyle]="{'border': status3 ? '3px solid red' : '3px solid green'}">Pickup: {{job3.pickupAddress}}<br />
+    <div class="job-button" (click)="navigateToDispatcherOptions()"
+         [ngStyle]="{'border': status3 ? '3px solid red' : '3px solid green'}">
+      Pickup: {{job3.pickupAddress}}<br/>
       Destination: {{job3.destinationAddress}}
-      <br />
+      <br/>
       Driver: {{driver3status}}
-    </button>
-  <!---third button-->
+    </div>
+    <!---third button-->
   </div>
 </div>
 
