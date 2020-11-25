@@ -1,0 +1,71 @@
+/* Styling for button to send user back to driver page */
+.driver-back-button {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+/* Main page container */
+.driver-trip-details-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Styling for the boxes */
+  .destination-box {
+    margin-top: 10px;
+    width: 95%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: whitesmoke;
+    border-radius: 5px;
+
+    /* Styling for the pickup/drop-off text */
+    .pickup-styling {
+      padding-left: 2%;
+    }
+
+    /* Styling for the address information */
+    .address-styling {
+      padding-left: 2%;
+      color: black;
+      opacity: .8;
+    }
+
+    h4 {
+      padding: 0;
+      margin: 10px 10px 5px 0;
+    }
+  }
+
+  .large-destination-box {
+    margin-top: 10px;
+    width: 95%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: whitesmoke;
+    border-radius: 5px;
+
+    /* Handles styling within the box */
+    .information-box {
+      margin: 2px;
+      /* Adjust the information styling */
+      .job-info {
+        color: cornflowerblue;
+      }
+      /* Adjust the styling for the number of passengers*/
+      .job-passengers {
+        color: orangered;
+      }
+    }
+  }
+
+}
