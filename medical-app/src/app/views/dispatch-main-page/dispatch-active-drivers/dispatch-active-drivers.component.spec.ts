@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DispatchActiveDriversComponent } from './dispatch-active-drivers.component';
+import { DriverDetailsPageComponent } from './driver-details-page.component';
 
-describe('DispatchActiveDriversComponent', () => {
-  let component: DispatchActiveDriversComponent;
-  let fixture: ComponentFixture<DispatchActiveDriversComponent>;
+describe('DriverDetailsPageComponent', () => {
+  let component: DriverDetailsPageComponent;
+  let fixture: ComponentFixture<DriverDetailsPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DispatchActiveDriversComponent ]
+      declarations: [ DriverDetailsPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DispatchActiveDriversComponent);
+    fixture = TestBed.createComponent(DriverDetailsPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

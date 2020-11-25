@@ -1,4 +1,5 @@
 export class Job {
+  jobId: number;
   pickupAddress: string;
   destinationAddress: string;
   pickupTime: string;

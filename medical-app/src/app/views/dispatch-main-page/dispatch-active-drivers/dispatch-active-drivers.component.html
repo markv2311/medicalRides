@@ -1,7 +1,44 @@
-<div class="active-driver-container">
-  <h2>Active Drivers</h2>
-  <div class="driver-container">
-    <!-- TODO: Add functionality (use of ngFor recommended to loop through and print active jobs)   -->
-    <p>Content needed...</p>
+<button mat-button (click)="navigateToDriverPage()" class="driver-back-button"><mat-icon>arrow_back_ios</mat-icon></button>
+<div class="driver-trip-details-container">
+  <div>
+    <h2>Driver Trip Details</h2>
+  </div>
+  <!-- Pickup Details -->
+  <div class="destination-box">
+    <div class="pickup-styling">Pickup: {{job.pickupTime}}</div>
+    <div class="address-styling">{{job.pickupAddress}}</div>
+  </div>
+  <!-- Drop-off Details -->
+  <div class="destination-box">
+    <div class="pickup-styling">Drop-off: {{job.dropOffTime}}</div>
+    <div class="address-styling">{{job.destinationAddress}}</div>
+  </div>
+
+  <!-- Extra Details -->
+  <div class="large-destination-box">
+    <div class="information-box">
+      Distance:
+      <span class="job-info">{{job.tripDistance}}</span>
+    </div>
+    <div class="information-box">
+      Drop-off Area:
+      <span class="job-info">{{job.dropOffDetails}}</span>
+    </div>
+    <div class="information-box">
+      Passengers:
+      <span class="job-passengers">{{job.numPassengers}}</span>
+    </div>
+    <div class="information-box">
+      Type:
+      <span class="job-info">{{job.vehicleType}}</span>
+    </div>
+    <div class="information-box">
+      <h3>Notes:</h3>
+      <span>{{job.notes}}</span>
+    </div>
+  </div>
+  <div class="destination-box">
+    <h4>Dispatcher Details</h4>
+    <span>Coming soon...</span>
   </div>
 </div>
