@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Job } from 'src/app/classes/job';
 
 @Component({
   selector: 'dispatch-job-queue',
@@ -9,6 +10,7 @@ export class DispatchJobQueueComponent implements OnInit {
   status: boolean = true;
   status2: boolean = false;
   status3: boolean = true;
+  private job1: Job;
   //all buttons must have diffrent status values.
 
   pickup: string ='1242 Thing Ave';
@@ -24,7 +26,20 @@ export class DispatchJobQueueComponent implements OnInit {
   driver3: string ='Clear';
 //This is where the data for the buttons will be taken and given to the html file.
 
-  constructor() { }
+  constructor() {
+    this.job1 ={
+      jobId:1,
+      destinationAddress: '64 Stone Rd',
+      pickupAddress: '1242 Thing Ave',
+      pickupTime: '6:40 PM',
+      dropOffTime: '7:00 PM',
+      dropOffDetails: 'null',
+      tripDistance: 6,
+      numPassengers: 1,
+      vehicleType: null,
+      notes: null
+    };
+    }
   ngOnInit(): void {
   }
 
