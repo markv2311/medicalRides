@@ -2,6 +2,7 @@
   <h1 style="text-align: center"> Dispatcher View</h1>
   <h2>Job Queue</h2>
   <div class="job-container">
+    <!-- TODO: Make this into a *ngFor loop -->
     <div class="job-button" (click)="navigateToDispatcherOptions()"
          [ngStyle]="{'border': status ? '3px solid red' : '3px solid green'}">
       Pickup: {{job1.pickupAddress}}<br/>

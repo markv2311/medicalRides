@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {JobSelectorService} from "../../services/job-selector.service";
 
 @Component({
   selector: 'bottom-nav',
@@ -11,7 +12,8 @@ export class BottomNavComponent implements OnInit {
   hasDispatchView = true;
 
   constructor(
-      private router: Router
+      private router: Router,
+      private jobSelectorService: JobSelectorService
   ) { }
 
   ngOnInit(): void {
@@ -29,6 +31,14 @@ export class BottomNavComponent implements OnInit {
    */
   openDriverView(): void {
     this.router.navigate(['./driver']);
+  }
+
+  /**
+   * Toggles the active job
+   */
+  toggleJob(): void {
+    this.jobSelectorService.toggleJob();
+    console.log('Job toggled!');
   }
 
 }

@@ -9,6 +9,7 @@ export class JobSelectorService {
   // Adds three sample jobs that can be used within the application
   private readonly jobOne: Job; // These are readonly as they are assigned in the constructor and nowhere else
   private readonly jobTwo: Job;
+  private readonly jobThree: Job;
   private currentJob: Job;
 
   constructor() {
@@ -36,6 +37,18 @@ export class JobSelectorService {
       numPassengers: 0,
       vehicleType: 'Single',
       notes: 'Passenger tends to run late.  Arrive extra early.'
+    };
+    this.jobThree = {
+      jobId: 11,
+      destinationAddress: '385 W.Main St',
+      pickupAddress: '249 Yellow Rock Dr',
+      pickupTime: '2:15 PM',
+      dropOffTime: '2:30 PM',
+      dropOffDetails: 'null',
+      tripDistance: 2,
+      numPassengers: 1,
+      vehicleType: null,
+      notes: null
     };
     // Check if the job was cached
     if (!localStorage.getItem('currentJobId')) {
@@ -82,5 +95,14 @@ export class JobSelectorService {
     this.currentJob = (this.currentJob === this.jobOne) ? this.jobTwo : this.jobOne;
     // Cache the value
     localStorage.setItem('currentJobId', this.currentJob.jobId.toString());
+  }
+
+  /**
+   * Gets the list of jobs
+   *
+   * @return - Returns the list of jobs as an array
+   */
+  getJobs(): Job[] {
+    return [this.jobOne, this.jobTwo, this.jobThree];
   }
 }
