@@ -16,4 +16,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [DispatchMainPageComponent, DriverMainPageComponent, DriverDetailsPageComponent];
+export const routingComponents = [DispatchMainPageComponent, DriverMainPageComponent, DriverDetailsPageComponent, DispatcherOptionsComponent];
