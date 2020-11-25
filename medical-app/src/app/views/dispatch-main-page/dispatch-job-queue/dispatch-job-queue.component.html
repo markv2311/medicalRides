@@ -2,32 +2,16 @@
   <h1 style="text-align: center"> Dispatcher View</h1>
   <h2>Job Queue</h2>
   <div class="job-container">
-    <!-- TODO: Make this into a *ngFor loop -->
-    <div class="job-button" (click)="navigateToDispatcherOptions()"
-         [ngStyle]="{'border': status ? '3px solid red' : '3px solid green'}">
-      Pickup: {{job1.pickupAddress}}<br/>
-      Destination: {{job1.destinationAddress}}
-      <br/>
-      Driver: {{driverstatus}}
+    <!-- Creates the jobs with their respective buttons -->
+    <div *ngFor="let job of jobs; let i = index">
+      <div class="job-button" (click)="navigateToDispatcherOptions()"
+           [ngStyle]="{'border': statuses[i] ? '3px solid red' : '3px solid green'}">
+        Pickup: {{job.pickupAddress}}<br/>
+        Destination: {{job.destinationAddress}}
+        <br/>
+        Driver: {{driverStatuses[i]}}
+      </div>
     </div>
-    <!-- both of these button tags create the buttons but based on the status of the job, 
-      it wil be green or red. The status of the job is a boolean located in queue.component.ts-->
-    <div class="job-button" (click)="navigateToDispatcherOptions()"
-         [ngStyle]="{'border': status2 ? '3px solid red' : '3px solid green'}">
-      Pickup: {{job2.pickupAddress}}<br/>
-      Destination: {{job2.destinationAddress}}
-      <br/>
-      Driver: {{driver2status}}
-    </div>
-    <!---second button-->
-    <div class="job-button" (click)="navigateToDispatcherOptions()"
-         [ngStyle]="{'border': status3 ? '3px solid red' : '3px solid green'}">
-      Pickup: {{job3.pickupAddress}}<br/>
-      Destination: {{job3.destinationAddress}}
-      <br/>
-      Driver: {{driver3status}}
-    </div>
-    <!---third button-->
   </div>
 </div>
 

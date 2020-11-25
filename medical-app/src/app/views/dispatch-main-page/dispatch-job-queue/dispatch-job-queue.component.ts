@@ -12,29 +12,31 @@ export class DispatchJobQueueComponent implements OnInit {
   status: boolean = true;
   status2: boolean = false;
   status3: boolean = true;
-  public job1: Job;
-  public job2: Job;
-  public job3: Job;
+  statuses: boolean[];
   public jobs: Job[];
-  //all buttons must have diffrent status values.
+  // All buttons must have different status values.
   driverstatus: string ='Needs Assignment';
 
   driver2status: string ='Rolling';
 
   driver3status: string ='Clear';
+  driverStatuses: string[];
 //This is where the data for the buttons will be taken and given to the html file.
 
   constructor(private router: Router, jobSelectorService: JobSelectorService) {
-    //These are the "properties" of the three job buttons. 
-    //By using this method with JSON, these properties can be called from anywhere
-    //TODO: Make this dynamic
+    //These are the "properties" of the three job buttons.
     this.jobs = jobSelectorService.getJobs();
-    this.job1 = this.jobs[0];
-    this.job2 = this.jobs[1];
-    this.job3 = this.jobs[2];
+
+    //TODO: Replace this eventually with a more dynamic solution
+    this.driverStatuses = [this.driverstatus, this.driver2status, this.driver3status];
+    this.statuses = [this.status, this.status2, this.status3];
   }
   ngOnInit(): void {
   }
+
+  /**
+   * Sends the user to the dispathcer options page
+   */
   navigateToDispatcherOptions(): void{
     this.router.navigate(['./dispatcher-options']);
   }
