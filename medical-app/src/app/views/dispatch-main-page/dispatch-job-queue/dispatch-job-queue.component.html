@@ -13,12 +13,7 @@
       it wil be green or red. The status of the job is a boolean located in queue.component.ts-->
       <!--<div>-->
       
-      <button type="button" mat-raised-button (click)="navigateToDispatcherOptions()" *ngIf="status2" style="position:absolute; left:500px; border: 3px solid red;">Pickup: {{job2.pickupAddress}}<br />
-        Destination: {{job2.destinationAddress}}
-        <br />
-        Driver: {{driver2status}}
-      </button>
-      <button type="!button" mat-raised-button (click)="navigateToDispatcherOptions()" *ngIf="!status2" style="position:absolute; left:500px; border: 3px solid green;">Pickup: {{job2.pickupAddress}}<br />
+      <button type="button" mat-raised-button (click)="navigateToDispatcherOptions()" style="position:absolute; left:500px;" [ngStyle]="{'border': status2 ? '3px solid red' : '3px solid green'}">Pickup: {{job2.pickupAddress}}<br />
         Destination: {{job2.destinationAddress}}
         <br />
         Driver: {{driver2status}}
@@ -27,12 +22,7 @@
 
 
 
-    <button type="button" mat-raised-button (click)="navigateToDispatcherOptions()" *ngIf="status3" style="position:absolute; left:1000px; border: 3px solid red;">Pickup: {{job3.pickupAddress}}<br />
-      Destination: {{job3.destinationAddress}}
-      <br />
-      Driver: {{driver3status}}
-    </button>
-    <button type="!button" mat-raised-button (click)="navigateToDispatcherOptions()" *ngIf="!status3" style="position:absolute; left:1000px; border: 3px solid green;">Pickup: {{job3.pickupAddress}}<br />
+    <button type="button" mat-raised-button (click)="navigateToDispatcherOptions()" style="position:absolute; left:1000px;" [ngStyle]="{'border': status3 ? '3px solid red' : '3px solid green'}">Pickup: {{job3.pickupAddress}}<br />
       Destination: {{job3.destinationAddress}}
       <br />
       Driver: {{driver3status}}
