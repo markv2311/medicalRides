@@ -1,30 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import {JobSelectorService} from '../../../services/job-selector.service';
-import {Job} from '../../../classes/job';
-import {Router} from '@angular/router';
-
+import {DriverStatusService} from '../../../services/driver-status.service';
 @Component({
-  selector: 'app-driver-details-page',
-  templateUrl: './driver-details-page.component.html',
-  styleUrls: ['./driver-details-page.component.less']
+  selector: 'dispatch-active-drivers',
+  templateUrl: './dispatch-active-drivers.component.html',
+  styleUrls: ['./dispatch-active-drivers.component.less']
 })
-export class DriverDetailsPageComponent implements OnInit {
+export class DispatchActiveDriversComponent implements OnInit {
 
-  public job: Job;
-
-  constructor(private jobSelectorService: JobSelectorService,
-              private router: Router) { }
+  constructor(public driverStatus: DriverStatusService) {}
 
   ngOnInit(): void {
-    // Assign the job to the current job that the service sees
-    this.job = this.jobSelectorService.getCurrentJob();
-  }
-
-  /**
-   * Navigates user back to driver page
-   */
-  navigateToDriverPage(): void {
-    this.router.navigate(['./driver']);
   }
 
 }
