@@ -14,7 +14,7 @@ export class DispatcherOptionsComponent implements OnInit {
   }
 
   navigateToDispatchMainPageComponent(): void{
-    this.router.navigate(['./dispatch-main-page/dispatch-main-page.component']);
+    this.router.navigate(['./dispatch']);
   }
 
 }
