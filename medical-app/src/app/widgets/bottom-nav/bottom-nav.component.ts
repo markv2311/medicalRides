@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
-import {JobSelectorService} from '../../services/job-selector.service';
+import {Router} from "@angular/router";
+import {JobSelectorService} from "../../services/job-selector.service";
 
 @Component({
   selector: 'bottom-nav',
@@ -41,5 +41,4 @@ export class BottomNavComponent implements OnInit {
     this.jobSelectorService.toggleJob();
     console.log('Job toggled!');
   }
-
 }

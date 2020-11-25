@@ -1,7 +1,16 @@
 <div class="job-queue-container">
+  <h1 style="text-align: center"> Dispatcher View</h1>
   <h2>Job Queue</h2>
   <div class="job-container">
-    <!-- TODO: Add functionality (use of ngFor recommended to loop through and print active jobs)   -->
-    <p>Content needed...</p>
+    <!-- Creates the jobs with their respective buttons -->
+    <div *ngFor="let job of jobs; let i = index">
+      <div class="job-button" (click)="navigateToDispatcherOptions()"
+           [ngStyle]="{'border': statuses[i] ? '3px solid red' : '3px solid green'}">
+        Pickup: {{job.pickupAddress}}<br/>
+        Destination: {{job.destinationAddress}}
+        <br/>
+        Driver: {{driverStatuses[i]}}
+      </div>
+    </div>
   </div>
 </div>

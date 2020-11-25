@@ -1,13 +1,27 @@
 // Master container for the component
 .job-queue-container {
+  h1 {
+    margin-bottom: 5px;
+  }
+  h2 {
+    margin-top: 5px;
+  }
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   // Container for the active job section
   .job-container {
-    width: 100%;
-    height: 40vh;
-    background-color: mediumspringgreen;
+    width: 98%;
+    height: 225px;
+    border: 2px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    /* Styling for the individual button */
+    .job-button {
+      margin: 5px 5px;
+      border-radius: 5px;
+    }
   }
 }

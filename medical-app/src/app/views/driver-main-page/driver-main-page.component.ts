@@ -19,5 +19,4 @@ export class DriverMainPageComponent implements OnInit {
   navigateToDetailsPage(): void {
     this.router.navigate(['./driver-details']);
   }
-
 }
