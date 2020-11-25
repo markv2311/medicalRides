@@ -3,7 +3,7 @@
   <h2>Job Queue</h2>
   <div class="job-container">
     <!-- TODO: Add functionality (use of ngFor recommended to loop through and print active jobs)   -->
-    <button type="button" *ngIf="status" style="border: 3px solid red;">Pickup: {{job1.pickupAddress}}<br />
+    <button type="button" mat-raised-button (click)="navigateToDispatcherOptions()" *ngIf="status" style="border: 3px solid red;">Pickup: {{job1.pickupAddress}}<br />
       Destination: {{job1.destinationAddress}}
       <br />
       Driver: {{driver}}

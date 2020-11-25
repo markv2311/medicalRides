@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Job } from 'src/app/classes/job';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'dispatch-job-queue',
@@ -21,7 +22,7 @@ export class DispatchJobQueueComponent implements OnInit {
   driver3: string ='Clear';
 //This is where the data for the buttons will be taken and given to the html file.
 
-  constructor() {
+  constructor(private router: Router) {
     this.job1 ={
       jobId:9,
       destinationAddress: '64 Stone Rd',
@@ -58,9 +59,13 @@ export class DispatchJobQueueComponent implements OnInit {
       vehicleType: null,
       notes: null
     };
+    //These are the "properties" of the three job buttons. 
+    //By using this method with JSON, these properties can be called from anywhere
     }
   ngOnInit(): void {
   }
-
+  navigateToDispatcherOptions(): void{
+    this.router.navigate(['./dispatcher-options']);
+  }
 
 }
