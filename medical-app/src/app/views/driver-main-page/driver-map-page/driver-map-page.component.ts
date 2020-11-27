@@ -25,9 +25,9 @@ export class DriverMapPageComponent implements OnInit {
   }
   getDirection(){
     //origin will be set somewhere random ig since we wont have actual van location
-    this.origin = {lat: 43.1566, lng: -77.6088};
+    this.origin = '420 Monroe Avenue Rochester';
     //destination rn set to cordinates
-    this.destination = 'Strong Memorial Hospital';
+    this.destination = this.job.destinationAddress;
   }
 
 }
