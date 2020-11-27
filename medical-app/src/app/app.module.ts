@@ -15,6 +15,8 @@ import {DispatchJobQueueComponent} from './views/dispatch-main-page/dispatch-job
 import { DriverDetailsPageComponent } from './views/driver-main-page/driver-details-page/driver-details-page.component';
 import { DispatcherOptionsComponent } from './views/dispatch-main-page/dispatcher-options/dispatcher-options.component';
 import { AgmCoreModule } from '@agm/core';
+import { AgmDirectionModule } from 'agm-direction';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { AgmCoreModule } from '@agm/core';
     MatButtonModule,
     MatIconModule,
     AgmCoreModule.forRoot({apiKey:'AIzaSyBJza0OeT4Z9CQIazUY_TYclfWKYTjNRb8'}),
+    AgmDirectionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
