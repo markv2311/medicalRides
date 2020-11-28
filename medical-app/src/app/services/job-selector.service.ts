@@ -28,7 +28,7 @@ export class JobSelectorService {
     /** TECHNIQUE 2: Use JSON (preferred approach) */
     this.jobTwo = {
       jobId: 1,
-      destinationAddress: 'Rochester Regional Hospital',
+      destinationAddress: 'Rochester General Hospital',
       pickupAddress: '43 Rainbow Road',
       pickupTime: '12:00 PM',
       dropOffTime: '1:00 PM',
@@ -40,7 +40,7 @@ export class JobSelectorService {
     };
     this.jobThree = {
       jobId: 11,
-      destinationAddress: '385 W.Main St',
+      destinationAddress: '385 West Main St',
       pickupAddress: '249 Yellow Rock Dr',
       pickupTime: '2:15 PM',
       dropOffTime: '2:30 PM',
