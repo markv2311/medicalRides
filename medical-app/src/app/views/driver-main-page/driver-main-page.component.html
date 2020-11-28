@@ -3,6 +3,10 @@
   <driver-map-page></driver-map-page>
   <!-- Button sends user to the additional details page -->
   <button mat-raised-button (click)="navigateToDetailsPage()">Trip Details</button>
+  <button
+    mat-raised-button (click)="changeButton()"
+    [ngClass]="{'green' : toggle, 'red': !toggle}" color="primary">{{status}}
+  </button>
   <!-- Bottom navigation section -->
   <bottom-nav class="bottom-nav"></bottom-nav>
 </div>
