@@ -1,8 +1,66 @@
-button{
-    width:200px;
-    height:40px;
-    border: none;
-    background: none;
-    padding: 0;
-    border-radius: 10px;
+/* Positions the back button for the user to return to the dispatch page */
+.back-button {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 0;
+}
+
+/* Generates the default styling container */
+.options-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  /* Removes the default margins */
+  h1, h2, h3, h4, p {
+    margin: 5px;
+  }
+
+  .job-details {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Moves our active drivers component */
+  .active-drivers-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 25px;
+  }
+
+  /* Creates styling for the buttons on the page*/
+  .options-buttons {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: 15px;
+
+    /* Styles the button itself */
+    button {
+      width: 48%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 16px;
+    }
+
+    /* Styles the request button*/
+    .request-button {
+      background-color: darkorange;
+    }
+
+    /* Styles the confirm button */
+    .confirm-button {
+      background-color: green;
+    }
+  }
 }
