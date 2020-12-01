@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "medical-app"
+  "defaultProject": "medical-app",
+  "cli": {
+    "analytics": "5e68f7fa-4c5b-4dde-843a-6371897d06a9"
+  }
 }
