@@ -61,7 +61,6 @@ export class DispatchJobQueueComponent implements OnInit {
       notes: null
     };
     //These are the "properties" of the three job buttons. 
-    //By using this method with JSON, these properties can be called from anywhere
     this.jobs =[this.job1,this.job2,this.job3];
   }
   ngOnInit(): void {

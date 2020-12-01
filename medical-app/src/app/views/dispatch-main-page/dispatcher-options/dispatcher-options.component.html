@@ -1,2 +1,20 @@
 <button type="button" mat-button (click)="navigateToDispatchMainPageComponent()"><mat-icon>arrow_back_ios</mat-icon></button>
-<p>Stuff coming soon...</p>
+<div style="text-align: center;">
+<h1>1. Review Details.</h1>
+<h2>Pickup: {{job.pickupAddress}}</h2>
+<h3>Destination: {{job.destinationAddress}}</h3>
+<h3>Job ID: {{job.jobId}}</h3>
+<p>Pickup Time: {{job.pickupTime}}</p>
+<p>Dropoff Time: {{job.dropOffDetails}}</p>
+<p>No. of Passengers: {{job.numPassengers}}</p>
+<p>Status: </p>
+<p>Requester: </p>
+<p>Contact Information: </p>
+<br>
+<br>
+<h1>2. Choose Driver.(Not really sure what this should do.)</h1>
+<button type="button" style="background-color:goldenrod">Call Requester.</button>
+<p></p>
+</div>
+
+
