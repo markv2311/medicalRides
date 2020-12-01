@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DispatchJobQueueComponent } from './dispatch-job-queue.component';
+import { DriverMapPageComponent } from './driver-map-page.component';
 
-describe('DispatchJobQueueComponent', () => {
-  let component: DispatchJobQueueComponent;
-  let fixture: ComponentFixture<DispatchJobQueueComponent>;
+describe('DriverMapPageComponent', () => {
+  let component: DriverMapPageComponent;
+  let fixture: ComponentFixture<DriverMapPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DispatchJobQueueComponent ]
+      declarations: [ DriverMapPageComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DispatchJobQueueComponent);
+    fixture = TestBed.createComponent(DriverMapPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

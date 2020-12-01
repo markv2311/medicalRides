@@ -3,7 +3,6 @@ import {Router} from '@angular/router';
 import {DriverStatusService} from '../../../services/driver-status.service';
 import {JobSelectorService} from '../../../services/job-selector.service';
 import {Job} from '../../../classes/job';
-import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-dispatcher-options',
@@ -19,7 +18,6 @@ public job: Job;
 
   ngOnInit(): void {
     this.job = this.jobSelectorService.getCurrentJob();
-    //this.driver = this.DriverStatusService.getDrivers();
   }
 
   navigateToDispatchMainPageComponent(): void{

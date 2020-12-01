@@ -8,6 +8,9 @@
   height: @navHeight;
   display: flex;
   flex-wrap: nowrap;
+  .middle-button {
+    color: blue !important;
+  }
   /* Styling for each nav element */
   .nav-item {
     display: flex;
@@ -22,12 +25,11 @@
       width: @iconSize;
       height: @iconSize;
       font-size: @iconSize;
-      &:hover {
-        color:red;
+    }
+    &:hover {
+      color:red;
     /*When clicking one of the bottom options, the symbol will light up red.*/
     /*This is only working for when the icon is clicked and held.*/
     }
-    }
-
   }
 }
