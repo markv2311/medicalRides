@@ -1,20 +1,19 @@
 <button type="button" mat-button (click)="navigateToDispatchMainPageComponent()"><mat-icon>arrow_back_ios</mat-icon></button>
 <div style="text-align: center;">
-<h1>1. Review Details.</h1>
-<h2>Pickup: {{job.pickupAddress}}</h2>
-<h3>Destination: {{job.destinationAddress}}</h3>
-<h3>Job ID: {{job.jobId}}</h3>
-<p>Pickup Time: {{job.pickupTime}}</p>
-<p>Dropoff Time: {{job.dropOffDetails}}</p>
+<h1>Dispatcher Options</h1>
+<h2>1. Review Details.</h2>
+<h3>Pickup: {{job.pickupAddress}}</h3>
+<h4>Destination: {{job.destinationAddress}}</h4>
+<h4>Job ID: {{job.jobId}}</h4>
+<p>Pickup Time: {{job.pickupTime}} | Dropoff Time: {{job.dropOffTime}}</p>
 <p>No. of Passengers: {{job.numPassengers}}</p>
-<p>Status: </p>
-<p>Requester: </p>
-<p>Contact Information: </p>
+<p>Status: {{job.status}}</p>
+<p>Requester:  Contact Information: </p>
+<h2>2. Choose Driver. Display the drivers from the driver class.</h2>
+<button type="button" style="background-color:goldenrod"><p style="color:white">Call Requester.</p></button>
 <br>
-<br>
-<h1>2. Choose Driver.(Not really sure what this should do.)</h1>
-<button type="button" style="background-color:goldenrod">Call Requester.</button>
-<p></p>
+<button type="button" mat-button (click)="navigateToDispatchMainPageComponent()" style="background-color:forestgreen"><p style="color:white">Confirm Trip.</p></button>
+<p *ngFor="let driver of driverStatus.getDrivers()">{{driver.name}}, {{driver.status}}</p>
 </div>
 
 
