@@ -25,6 +25,7 @@ export class JobSelectorService {
     this.jobOne.numPassengers = 1;
     this.jobOne.vehicleType = 'Double';
     this.jobOne.notes = 'The pickup location is farther than normal.  Arrive earlier than normal to account for traffic.';
+    this.jobOne.status = 'Needs Assignment';
     /** TECHNIQUE 2: Use JSON (preferred approach) */
     this.jobTwo = {
       jobId: 1,
@@ -36,7 +37,8 @@ export class JobSelectorService {
       tripDistance: 5.5,
       numPassengers: 0,
       vehicleType: 'Single',
-      notes: 'Passenger tends to run late.  Arrive extra early.'
+      notes: 'Passenger tends to run late.  Arrive extra early.',
+      status: 'Rolling'
     };
     this.jobThree = {
       jobId: 11,
@@ -48,7 +50,8 @@ export class JobSelectorService {
       tripDistance: 2,
       numPassengers: 1,
       vehicleType: null,
-      notes: null
+      notes: null,
+      status: 'Rolling'
     };
     // Check if the job was cached
     if (!localStorage.getItem('currentJobId')) {
