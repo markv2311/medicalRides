@@ -17,7 +17,7 @@ public job: Job;
   constructor(private jobSelectorService: JobSelectorService, private router: Router, public driverStatus: DriverStatusService) { }
 
   ngOnInit(): void {
-    this.job = this.jobSelectorService.getCurrentJob();
+    this.job = history.state.data;
   }
 
   navigateToDispatchMainPageComponent(): void{

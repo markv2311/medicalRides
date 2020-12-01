@@ -9,10 +9,9 @@ import {Router} from '@angular/router';
   styleUrls: ['./dispatch-job-queue.component.less']
 })
 export class DispatchJobQueueComponent implements OnInit {
-  status: boolean = true;
-  status2: boolean = false;
-  status3: boolean = true;
-  public job: Job;
+  status = true;
+  status2 = false;
+  status3 = true;
   statuses: boolean[];
   public jobs: Job[];
 // This is where the data for the buttons will be taken and given to the html file.
@@ -22,14 +21,12 @@ export class DispatchJobQueueComponent implements OnInit {
     // TODO: Replace this eventually with a more dynamic solution
     this.statuses = [this.status, this.status2, this.status3];
   }
-  ngOnInit(): void {
-    this.job = this.jobSelectorService.getCurrentJob();
-  }
+  ngOnInit(): void {}
 
   /**
    * Sends the user to the dispatcher options page
    */
-  navigateToDispatcherOptions(): void{
-    this.router.navigate(['./dispatcher-options']);
+  navigateToDispatcherOptions(job: Job): void{
+    this.router.navigate(['./dispatcher-options'], {state: {data: job}});
   }
 }
