@@ -1,2 +1,31 @@
-<button type="button" mat-button (click)="navigateToDispatchMainPageComponent()"><mat-icon>arrow_back_ios</mat-icon></button>
-<p>Stuff coming soon...</p>
+<button class="back-button" mat-button (click)="navigateToDispatchMainPageComponent()">
+  <mat-icon>arrow_back_ios</mat-icon>
+</button>
+<div class="options-wrapper">
+  <h1>Dispatcher Options</h1>
+  <h2>1. Review Details.</h2>
+  <h3>Pickup: {{job.pickupAddress}}</h3>
+  <h4>Destination: {{job.destinationAddress}}</h4>
+  <h4>Job ID: {{job.jobId}}</h4>
+  <div class="job-details">
+    <p>Pickup Time: {{job.pickupTime}} | Dropoff Time: {{job.dropOffTime}}</p>
+    <p>No. of Passengers: {{job.numPassengers}}</p>
+    <p>Status: {{job.status}}</p>
+    <p>Requester: Contact Information: </p>
+  </div>
+  <h2>2. Choose Driver.</h2>
+  <div class="active-drivers-wrapper">
+    <dispatch-active-drivers></dispatch-active-drivers>
+  </div>
+  <div class="options-buttons">
+    <button mat-raised-button class="request-button">
+      <p>Call Requester</p>
+    </button>
+    <br>
+    <button mat-raised-button class="confirm-button" (click)="navigateToDispatchMainPageComponent()">
+      <p>Confirm Trip</p>
+    </button>
+  </div>
+</div>
+
+

@@ -4,7 +4,7 @@
   <div class="job-container">
     <!-- Creates the jobs with their respective buttons -->
     <div *ngFor="let job of jobs; let i = index">
-      <div class="job-button" (click)="navigateToDispatcherOptions()"
+      <div class="job-button" (click)="navigateToDispatcherOptions(job)"
            [ngStyle]="{'border': statuses[i] ? '3px solid red' : '3px solid green'}">
         Pickup: {{job.pickupAddress}}<br/>
         Destination: {{job.destinationAddress}}
