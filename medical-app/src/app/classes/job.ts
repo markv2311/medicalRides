@@ -9,4 +9,5 @@ export class Job {
   numPassengers ?= -1;
   vehicleType ?= '';
   notes ?= '';
+  status ?= '';
 }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {JobSelectorService} from '../../../services/job-selector.service';
 import { Job } from 'src/app/classes/job';
 import {Router} from '@angular/router';
 
@@ -11,6 +12,7 @@ export class DispatchJobQueueComponent implements OnInit {
   status: boolean = true;
   status2: boolean = false;
   status3: boolean = true;
+  public job: Job;
   public job1: Job;
   public job2: Job;
   public job3: Job;
@@ -23,7 +25,7 @@ export class DispatchJobQueueComponent implements OnInit {
   driver3status: string ='Clear';
 //This is where the data for the buttons will be taken and given to the html file.
 
-  constructor(private router: Router) {
+  constructor(public jobSelectorService: JobSelectorService, private router: Router) {
     this.job1 ={
       jobId:9,
       destinationAddress: '64 Stone Rd',
@@ -65,6 +67,7 @@ export class DispatchJobQueueComponent implements OnInit {
     this.jobs =[this.job1,this.job2,this.job3];
   }
   ngOnInit(): void {
+    this.job = this.jobSelectorService.getCurrentJob();
   }
   navigateToDispatcherOptions(): void{
     this.router.navigate(['./dispatcher-options']);

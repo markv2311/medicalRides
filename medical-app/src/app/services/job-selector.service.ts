@@ -9,6 +9,7 @@ export class JobSelectorService {
   // Adds three sample jobs that can be used within the application
   private readonly jobOne: Job; // These are readonly as they are assigned in the constructor and nowhere else
   private readonly jobTwo: Job;
+  //private readonly jobThree;
   private currentJob: Job;
 
   constructor() {
@@ -24,6 +25,7 @@ export class JobSelectorService {
     this.jobOne.numPassengers = 1;
     this.jobOne.vehicleType = 'Double';
     this.jobOne.notes = 'The pickup location is farther than normal.  Arrive earlier than normal to account for traffic.';
+    this.jobOne.status = 'Needs Assignment';
     /** TECHNIQUE 2: Use JSON (preferred approach) */
     this.jobTwo = {
       jobId: 1,
@@ -35,8 +37,24 @@ export class JobSelectorService {
       tripDistance: 5.5,
       numPassengers: 0,
       vehicleType: 'Single',
-      notes: 'Passenger tends to run late.  Arrive extra early.'
+      notes: 'Passenger tends to run late.  Arrive extra early.',
+      status: 'Rolling'
     };
+    /*
+    this.jobThree = {
+      jobId:11,
+      destinationAddress: '385 W.Main St',
+      pickupAddress: '249 Yellow Rock Dr',
+      pickupTime: '2:15 PM',
+      dropOffTime: '2:30 PM',
+      dropOffDetails: 'null',
+      tripDistance: 2,
+      numPassengers: 1,
+      vehicleType: null,
+      notes: null,
+      status: 'Rolling'
+    };
+    */
     // Check if the job was cached
     if (!localStorage.getItem('currentJobId')) {
       // By default, the current job will initialize to jobOne

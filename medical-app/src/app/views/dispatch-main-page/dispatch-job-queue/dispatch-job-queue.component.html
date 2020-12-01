@@ -4,28 +4,34 @@
   <div class="job-container">
     <!-- TODO: Add functionality (use of ngFor recommended to loop through and print active jobs)   -->
     <!--<div *ngFor="let job of jobs">-->
-    <button type="button" mat-raised-button (click)="navigateToDispatcherOptions()" [ngStyle]="{'border': status ? '3px solid red' : '3px solid green'}">Pickup: {{job1.pickupAddress}}<br />
-      Destination: {{job1.destinationAddress}}
+    <button type="button" mat-raised-button (click)="navigateToDispatcherOptions()" [ngStyle]="{'border': status ? '3px solid red' : '3px solid green'}">Pickup: {{job.pickupAddress}}<br />
+      Destination: {{job.destinationAddress}}
       <br />
-      Driver: {{driverstatus}}
+      Driver Status: {{job.status}}
+      <br />
+      Trip Distance:{{job.tripDistance}}
     </button>
     <!-- both of these button tags create the buttons but based on the status of the job, 
       it wil be green or red. The status of the job is a boolean located in queue.component.ts-->
       <!--<div>-->
       
-      <button type="button" mat-raised-button (click)="navigateToDispatcherOptions()" style="position:absolute; left:500px;" [ngStyle]="{'border': status2 ? '3px solid red' : '3px solid green'}">Pickup: {{job2.pickupAddress}}<br />
-        Destination: {{job2.destinationAddress}}
+      <button type="button" mat-raised-button (click)="navigateToDispatcherOptions()" style="position:absolute; left:500px;" [ngStyle]="{'border': status2 ? '3px solid red' : '3px solid green'}">Pickup: {{job.pickupAddress}}<br />
+        Destination: {{job.destinationAddress}}
         <br />
-        Driver: {{driver2status}}
+        Driver Status: {{job.status}}
+        <br />
+        Trip Distance:{{job.tripDistance}}
       </button>
     <!---second button-->
 
 
 
-    <button type="button" mat-raised-button (click)="navigateToDispatcherOptions()" style="position:absolute; left:1000px;" [ngStyle]="{'border': status3 ? '3px solid red' : '3px solid green'}">Pickup: {{job3.pickupAddress}}<br />
-      Destination: {{job3.destinationAddress}}
+    <button type="button" mat-raised-button (click)="navigateToDispatcherOptions()" style="position:absolute; left:1000px;" [ngStyle]="{'border': status3 ? '3px solid red' : '3px solid green'}">Pickup: {{job.pickupAddress}}<br />
+      Destination: {{job.destinationAddress}}
       <br />
-      Driver: {{driver3status}}
+      Driver Status: {{job.status}}
+      <br />
+      Trip Distance:{{job.tripDistance}}
     </button>
   <!---third button-->
   </div>
