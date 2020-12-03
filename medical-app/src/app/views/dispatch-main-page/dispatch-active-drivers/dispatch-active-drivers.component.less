@@ -1,0 +1,39 @@
+// Master container for the component
+.active-driver-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  // Container that holds the active driver list
+  .driver-container {
+    width: 100%;
+    height: 35vh;
+    .driver-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      // Used for the picture that will be added in the future
+      .image-placeholder {
+        width: 40px;
+        height: 40px;
+        margin: 8px;
+        border-radius: 100%;
+        background-color: cornflowerblue;
+      }
+      /* Adjusts the status text*/
+      .status-span {
+        position: relative;
+        bottom: 16px;
+        /* Styles the dot */
+        .dot {
+          position: relative;
+          top: 16px;
+          left: 6px;
+          font-size: 64px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

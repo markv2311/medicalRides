@@ -1,0 +1,14 @@
+<div class="driver-main-container">
+  <h2>Driver View</h2>
+  <driver-map-page></driver-map-page>
+  <div class="trip-buttons">
+    <button
+        mat-raised-button (click)="changeButton()"
+        [ngClass]="{'green' : toggle, 'red': !toggle}" color="primary">{{status}}
+    </button>
+    <!-- Button sends user to the additional details page -->
+    <button mat-raised-button (click)="navigateToDetailsPage()">Trip Details</button>
+  </div>
+  <!-- Bottom navigation section -->
+  <bottom-nav class="bottom-nav"></bottom-nav>
+</div>

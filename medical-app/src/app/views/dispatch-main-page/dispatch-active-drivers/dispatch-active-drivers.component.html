@@ -1,0 +1,15 @@
+<div class="active-driver-container">
+  <div class="driver-container">
+    <div *ngFor="let driver of driverStatus.getDrivers()">
+      <div class="driver-wrapper">
+        <div class="image-placeholder"></div>
+        <span class="name">{{driver.name}}</span>
+        <br>
+        <span class="status-span" [ngStyle]="{'color': (driver.status === 'Online') ? 'green' : 'red'}">
+          <span class="dot">&middot;</span>
+          &nbsp;{{driver.status}}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
